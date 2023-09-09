@@ -1,0 +1,11 @@
+.footerParent{
+    width: 100%;
+}
+.footerChild{
+    width: 100%;
+    height: 10%;
+    
+}
+.footerChild a{
+    text-decoration: none;
+}
