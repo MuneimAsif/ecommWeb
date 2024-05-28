@@ -18,7 +18,7 @@ export default function Home(){
     return <>
         {/* <!-- NAVBAR START --> */}
     <div>
-    <nav className="navbar navbar-expand-lg bg-white sticky-top">
+    {/* <nav className="navbar navbar-expand-lg bg-white sticky-top">
         <div className="container">
         <img className="mt-3" src="https://preview.colorlib.com/theme/ogani/img/logo.png" alt="" />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@ export default function Home(){
             </ul>
           </div>
         </div>  
-      </nav>
+      </nav> */}
     </div>
     {/* <!-- NAVBAR END --> */}
 
