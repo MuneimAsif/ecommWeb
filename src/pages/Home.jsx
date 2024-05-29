@@ -1,7 +1,12 @@
 import axios from "axios"
 import { useState } from "react"
 import CardCom from "../component/CardCom"
-
+import { LiaShoppingBagSolid } from "react-icons/lia";
+import { IoIosAddCircle } from "react-icons/io";
+import { FaTruck } from "react-icons/fa6";
+import { GiReturnArrow } from "react-icons/gi";
+import { RiCustomerService2Fill } from "react-icons/ri";
+import { FaCoins } from "react-icons/fa6";
 // import { useNavigate } from "react-router-dom"
 
 export default function Home(){
@@ -17,39 +22,100 @@ export default function Home(){
     } 
     return <>
         {/* <!-- NAVBAR START --> */}
-    <div>
-    {/* <nav className="navbar navbar-expand-lg bg-white sticky-top">
-        <div className="container">
-        <img className="mt-3" src="https://preview.colorlib.com/theme/ogani/img/logo.png" alt="" />
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className=" collapse navbar-collapse" id="navbarNav">
-            <ul className="ms-auto navbar-nav fw-bold me-5">
-              <li className="mx-3 mt-3 nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li className="mx-3 mt-3 nav-item">
-                <a className="nav-link" href="#products">Products</a>
-              </li>
-              <li className="mx-3 mt-3 nav-item">
-                <a className="nav-link" href="#blog">Blog</a>
-              </li>
-              <li className="mx-3 mt-3 nav-item">
-                <a className="nav-link disabled">Discount</a>
-              </li>
-            </ul>
-          </div>
-        </div>  
-      </nav> */}
-    </div>
+    
     {/* <!-- NAVBAR END --> */}
 
-    {/* <!-- CONTAINER START --> */}
- <div className="container-fluid">
-    <img className="w-100 h-50" src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="" />
+    {/* <!-- BANNER START --> */}
+ <div className="">
+ <div className="backgroundImage">
+
+    <nav class="navbar navbar-expand-lg  main_box">
+<div class="navContainer container mt-5 bg-white p-2 rounded-1">
+<a class="navbar-brand logo_h" href=""><img className="ms-5 " src="assets/logo.webp" alt="" /></a>
+
+
+<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+<ul class="nav navbar-nav menu_nav ms-auto me-2">
+<li class="nav-item active" className="me-4 fw-bold"><a class="nav-link home" href="">HOME</a></li>
+<li class="nav-item active" className="me-4 fw-bold"><a class="nav-link shop" href="">SHOP</a></li>
+<li class="nav-item active" className="me-4 fw-bold"><a class="nav-link blogs" href="">BLOGS</a></li>
+<li class="nav-item active" className="me-4 fw-bold"><a class="nav-link contact" href="">CONTACT</a></li>
+<LiaShoppingBagSolid id="LiaShoppingBagSolid"  className="mt-1 fs-3 me-5"/>
+</ul>
+
+
+</div>
+</div>
+</nav>
+   
+   <div className="container">
+    <div className="row">
+      <div className="col-lg-6 col-md-8 col-12">
+        <div className="p-5">
+               <h1 className=" h1a  fw-bold"><b>Nike New Collection!</b></h1>
+               <p className="my-4" style={{color:'#aca7a7'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sapiente tempora, doloremque sint quas, voluptatem eligendi qui ea vitae natus nihil, beatae veritatis corporis asperiores laudantium! Labore consequuntur harum quam.</p>
+              <p class='addToCart' style={{fontSize:'0.8rem',fontWeight:'bold'}}> <IoIosAddCircle style={{color:'#ffa500',fontSize:'3.5rem'}} className="me-2" />ADD TO CART</p>
+        </div>
+      </div>
+      
+      <div className="col-lg-6 col-md-8 col-12">
+        <div className="p-3">
+         <img src="assets/bannerShoe.webp" alt="" className="mt-3" width={'105%'}  />
+        </div>
+      </div>
+      
+    </div>
+   </div>
+
+    </div>
  </div>
-    {/* <!-- CONTAINER END --> */}
+    {/* <!-- BANNER END --> */}
+
+    {/* SERVICES START */}
+    <div className="servicesContainer container" style={{color:'#ffffff',marginTop:'8%'}}>
+        <div className="row p-5">
+
+            <div className="col-lg-3 col-md-6 col-12">
+                <div className="text-center">
+                    <FaTruck className="fs-1 text-dark" />
+                    <p className="mt-3 text-dark fw-bold">FREE DELIVERY</p>
+                    <p style={{marginTop:'-15px', color:'grey'}}>Free Shipping On All Orders</p>
+                </div>
+                </div>
+      
+            <div className="col-lg-3 col-md-6 col-12">
+                <div className="text-center">
+                    <GiReturnArrow className="fs-1 text-dark" />
+                    <p className="mt-3 text-dark fw-bold">RETURN POLICY</p>
+                    <p style={{marginTop:'-15px', color:'grey'}}>Return Policy Available (Conditional)</p>
+                </div>
+                </div>
+      
+            <div className="col-lg-3 col-md-6 col-12">
+                <div className="text-center">
+                    <RiCustomerService2Fill className="fs-1 text-dark" />
+                    <p className="mt-3 text-dark fw-bold">24/7 Support</p>
+                    <p style={{marginTop:'-15px', color:'grey'}}>Always Available For You</p>
+                </div>
+                </div>
+      
+            <div className="col-lg-3 col-md-6 col-12">
+                <div className="text-center">
+                    <FaCoins className="fs-1 text-dark" />
+                    <p className="mt-3 text-dark fw-bold">Secure Payment</p>
+                    <p style={{marginTop:'-15px', color:'grey'}}>Secure Methods For Payment</p>
+                </div>
+                </div>
+      
+        </div>
+    </div>
+    {/* SERVICES END */}
+
+
+
+
+
+
 
     {/* <!-- CARD START --> */}
      
